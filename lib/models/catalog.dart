@@ -1,5 +1,17 @@
+class CatalogModel {
+  static final items = [
+    Item(
+        id: 1,
+        name: "iPhone 12 Pro",
+        description: "Apple iPhone 12th Gen",
+        price: 999,
+        color: "#33505a",
+        image: "assests/images/hey.png")
+  ];
+}
+
 class Item {
-  final String id;
+  final int id;
   final String name;
   final String description;
   final num price;
@@ -14,13 +26,3 @@ class Item {
       required this.color,
       required this.image});
 }
-
-final products = [
-  Item(
-      id: "Item 001",
-      name: "iPhone 12 Pro",
-      description: "Apple iPhone 12th Gen",
-      price: 999,
-      color: "#33505a",
-      image: "assests/images/hey.png")
-];
