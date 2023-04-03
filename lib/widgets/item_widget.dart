@@ -11,10 +11,10 @@ class ItemWidget extends StatelessWidget {
       color: Colors.brown.shade50,
       shadowColor: Colors.brown,
       child: ListTile(
-        onTap: () => print("${item.name} pressed"),
+        // onTap: () => print("${item.name} pressed"),
         leading: Image.asset(item.image),
         title: Text(item.name),
-        subtitle: Text(item.description),
+        subtitle: Text(item.desc),
         trailing: Text(
           "\$${item.price}",
           style:
