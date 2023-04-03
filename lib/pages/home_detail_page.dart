@@ -15,9 +15,9 @@ class HomeDetailPage extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
       ),
-      backgroundColor: MyThemes.creamColor,
+      backgroundColor: context.canvasColor,
       bottomNavigationBar: Container(
-        color: Colors.white,
+        color: context.cardColor,
         child: ButtonBar(
           alignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -48,10 +48,10 @@ class HomeDetailPage extends StatelessWidget {
             arcType: VxArcType.CONVEY,
             edge: VxEdge.TOP,
             child: Container(
-              color: Colors.white,
+              color: context.cardColor,
               width: context.screenWidth,
               child: Column(children: [
-                catalog.name.text.bold.xl4.color(MyThemes.brownishColor).make(),
+                catalog.name.text.bold.xl4.color(context.accentColor).make(),
                 catalog.desc.text.xl.textStyle(context.captionStyle).make(),
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
                     .text
