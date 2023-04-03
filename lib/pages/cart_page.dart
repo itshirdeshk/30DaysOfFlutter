@@ -14,7 +14,7 @@ class CartPage extends StatelessWidget {
         title: "Cart".text.color(context.accentColor).bold.make(),
       ),
       body: Column(
-        children: [Placeholder().p32().expand(), Divider(), _CartTotal()],
+        children: [_CartList().p32().expand(), Divider(), _CartTotal()],
       ),
     );
   }
@@ -30,7 +30,13 @@ class _CartTotal extends StatelessWidget {
       child: Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
         "\$999".text.xl5.color(context.accentColor).make(),
         30.widthBox,
-        ElevatedButton(onPressed: () {}, child: "Buy".text.white.make())
+        ElevatedButton(
+                onPressed: () {
+                  ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                    content: "Buying not supported yet".text.make(),
+                  ));
+                },
+                child: "Buy".text.white.make())
             .w32(context),
       ]),
     );
@@ -55,6 +61,7 @@ class __CartListState extends State<_CartList> {
           icon: Icon(Icons.remove_circle_outline),
           onPressed: () {},
         ),
+        title: "Item 1".text.make(),
       ),
     );
   }
