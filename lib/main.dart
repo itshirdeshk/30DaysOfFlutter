@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:practice_1/home_page.dart';
+import 'package:practice_1/pages/home_page.dart';
 import 'package:practice_1/pages/login_page.dart';
 import 'package:practice_1/utils/routes.dart';
 import 'package:practice_1/widgets/themes.dart';
