@@ -26,10 +26,11 @@ class MyApp extends StatelessWidget {
       themeMode: ThemeMode.system,
       theme: MyThemes.lightTheme,
       darkTheme: MyThemes.darkTheme,
+      
 
       routeInformationParser: VxInformationParser(),
       routerDelegate: VxNavigator(routes: {
-        "/": (_, __) => const MaterialPage(child: LoginPage()),
+        "/": (_, __) => const MaterialPage(child: HomePage()),
         MyRoutes.homeRoute: (_, __) => const MaterialPage(child: HomePage()),
         MyRoutes.homeDetailRoute: (uri, _) {
           final catalog = (VxState.store as MyStore)
@@ -40,11 +41,12 @@ class MyApp extends StatelessWidget {
         MyRoutes.loginRoute: (_, __) => const MaterialPage(child: LoginPage()),
         MyRoutes.cartRoute: (_, __) => const MaterialPage(child: CartPage()),
       }),
-      // initialRoute: MyRoutes.homeRoute,
+      // init
       // routes: {
-      //   MyRoutes.loginRoute: (context) => const LoginPage(),
-      //   MyRoutes.homeRoute: (context) => const HomePage(),
-      //   MyRoutes.cartRoute: (context) => const CartPage(),
+      //   "/": (context) => LoginPage(),
+      //   MyRoutes.homeRoute: (context) => HomePage(),
+      //   MyRoutes.loginRoute: (context) => LoginPage(),
+      //   MyRoutes.cartRoute: (context) => CartPage(),
       // },
     );
   }
