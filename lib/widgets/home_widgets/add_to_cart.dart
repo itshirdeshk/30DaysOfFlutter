@@ -20,7 +20,7 @@ class AddToCartState extends State<AddToCart> {
 
   @override
   Widget build(BuildContext context) {
-    bool isInCart = _cart.items.contains(widget.catalog) ?? false;
+    bool isInCart = _cart.items.contains(widget.catalog);
     return ElevatedButton(
         onPressed: () {
           if (!isInCart) {
@@ -34,6 +34,7 @@ class AddToCartState extends State<AddToCart> {
         style: ButtonStyle(
             backgroundColor: MaterialStateProperty.all(MyThemes.brownishColor),
             shape: MaterialStateProperty.all(const StadiumBorder())),
-        child: isInCart ? Icon(Icons.done) : Icon(CupertinoIcons.cart_badge_plus));
+        child:
+            isInCart ? Icon(Icons.done) : Icon(CupertinoIcons.cart_badge_plus));
   }
 }
