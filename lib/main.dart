@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
 
       routeInformationParser: VxInformationParser(),
       routerDelegate: VxNavigator(routes: {
-        "/": (_, __) => const MaterialPage(child: HomePage()),
+        "/": (_, __) => const MaterialPage(child: LoginPage()),
         MyRoutes.homeRoute: (_, __) => const MaterialPage(child: HomePage()),
         MyRoutes.homeDetailRoute: (uri, _) {
           final catalog = (VxState.store as MyStore)
