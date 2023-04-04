@@ -16,7 +16,7 @@ class CartPage extends StatelessWidget {
         title: "Cart".text.color(context.accentColor).bold.make(),
       ),
       body: Column(
-        children: [_CartList().p32().expand(), Divider(), _CartTotal()],
+        children: [_CartList().p32().expand(), const Divider(), const _CartTotal()],
       ),
     );
   }
